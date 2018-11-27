@@ -18,6 +18,9 @@
 				font-weight: bold;
 				font-size: 3em;
 			}
+			.inputWrapper {
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -28,13 +31,20 @@
 			<div class="title">
 				Welcome to Flint! <br>
 			</div>
-			<strong>Username:</strong>
-			<input type="text" name="username" class="form-control">
-			<strong>Password:</strong>
-			<input type="text" name="password" class="form-control">
-
-			<input type="submit" name="submit" class="form-control">
-			<button onclick=location.href='createAccount.php' type="button" class="form-control"> Create Account </button>
+			<div class="inputWrapper">
+				<strong>Username:</strong><br>
+				<input type="text" name="username" class="col-md-offset-3 col-md-6">
+			</div>
+			<br><br>
+			<div class="inputWrapper">
+				<strong>Password:</strong><br>
+				<input type="text" name="password" class="col-md-offset-3 col-md-6"><br>
+			</div>
+			<br><br>
+			<div class="inputWrapper">
+				<input type="submit" name="submit" class="col-md-offset-3 col-md-6 btn btn-danger"><br><br>
+				<button onclick=location.href='createAccount.php' type="button" class="col-md-offset-3 col-md-6 btn btn-danger"> Create Account </button>
+			</div>
 		</form>
 	</body>
 </html>

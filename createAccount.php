@@ -18,6 +18,9 @@
 				font-weight: bold;
 				font-size: 3em;
 			}
+			.inputWrapper {
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -28,13 +31,19 @@
 			<div class="title">
 				Create Your Account! <br>
 			</div>
-			<strong>Username:</strong>
-			<input type="text" name="username" class="form-control">
-			<strong>Password:</strong>
-			<input type="text" name="password" class="form-control">
+			<div class="inputWrapper">
+				<strong>Username:</strong><br>
+				<input type="text" name="username" class="col-md-offset-3 col-md-6">
+			</div>
+			<br><br>
+			<div class="inputWrapper">
+				<strong>Password:</strong><br>
+				<input type="text" name="password" class="col-md-offset-3 col-md-6">
+			</div>
+			<br><br>
 
-			<input type="submit" name="submit" class="form-control">
-			<button onclick=location.href='homepage.php' type="button" class="form-control"> Back </button>
+			<input type="submit" name="submit" class="col-md-offset-3 col-md-6 btn btn-danger"><br><br>
+			<button onclick=location.href='homepage.php' type="button" class="col-md-offset-3 col-md-6 btn btn-danger"> Back </button>
 		</form>
 	</body>
 </html>
@@ -53,7 +62,7 @@
 				header("Location: homepage.php");
 			} else {
 				print_r($result);
-				echo '<h3 style="color:red;">Unable to create account.</h3>';
+				echo '<br><br><h3 style="color:red; text-align: center;">Unable to create account.</h3>';
 			}
 		}
 	}
