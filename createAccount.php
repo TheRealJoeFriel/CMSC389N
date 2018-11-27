@@ -50,18 +50,18 @@
 
 <?php
 	if (isset($_POST["submit"])) {
-		$db_connection = new mysqli("localhost", "Flintadmin", "Flint", "Flint");
+		$db_connection = new mysqli("localhost", "flintuser", "flintpass", "flint");
 		if ($db_connection->connect_error) {
 			die($db_connection->connect_error);
 		} else {
 			$name = trim($_POST['username']);
 			$password = trim($_POST['password']);
-			$query = "insert into users name, password values '$name' '$password'";
+			$query = "insert into users values (\"".$name."\", \"".$password."\");";
 			$result = $db_connection->query($query);
 			if ($result) {
 				header("Location: homepage.php");
 			} else {
-				print_r($result);
+				die("Insertion failed: " . $db_connection->error);
 				echo '<br><br><h3 style="color:red; text-align: center;">Unable to create account.</h3>';
 			}
 		}

@@ -51,15 +51,15 @@
 
 <?php
 	if (isset($_POST["submit"])) {
-		$db_connection = new mysqli("localhost", "Flintadmin", "Flint", "Flint");
+		$db_connection = new mysqli("localhost", "flintuser", "flintpass", "flint");
 		if ($db_connection->connect_error) {
 			die($db_connection->connect_error);
 		} else {
 			$name = trim($_POST['username']);
 			$password = trim($_POST['password']);
-			$query = "select * from users where name = '$name' and password = '$password'";
+			$query = "select * from users where user = '".$name."' and pass = '".$password."';";
 			$result = $db_connection->query($query);
-			if (mysqli_num_rows($result) > 0) {
+			if (($result)) {
 				header("Location: feed.php");
 			} else {
 				echo '<h3 style="color:red;">Invalid Login Information.</h3>';
