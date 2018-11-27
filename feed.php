@@ -52,10 +52,9 @@ li a.active {
 <body>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a class="active" href="feed.php">Home</a></li>
+  <li><a href="myProfile.php">My Profile</a></li>
+  <li><a href="chat.php">Chats</a></li>
   <li><img src="logo.png" class='small' id='logo'></li>
 </ul>
 
