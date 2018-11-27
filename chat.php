@@ -49,18 +49,44 @@ li a.active {
 }
 .wrapper
 {
-width:100%;
-height:100px;
-position:relative;
+    width:90%;
+    height:90%;
+    position:relative;
 }
 
 .arrow
 {
-width:10px;
-height:10px;
-position:absolute;
-right:0px;
-bottom:0px;
+    width:10px;
+    height:10px;
+    position:absolute;
+    right:0px;
+    bottom:0px;
+}
+textarea{
+    font-size: 20px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:90%;
+    height:60px;
+}
+button {
+    position:fixed;
+    bottom:0;
+    right:0;
+    width: 10%;
+    height: 60px;
+}
+.chatBubble {
+    overflow: auto;
+    font-size: 24px;
+    background-color: dodgerblue;
+    border-color: white;
+    border-style: groove, medium;
+    border-radius: 100px;
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 </style>
 </head>
@@ -74,12 +100,31 @@ bottom:0px;
   <li><img src="logo.png" class='small' id='logo'></li>
 </ul>
 
-<div class="wrapper">
-    <div class="arrow">Hello</div>
-</div>
+<h3 style="text-align: center"> Now chatting with <script>var oldURL = document.referrer;</script> CHANGE THIS</h3>
 
 
+<div id='text'></div>
 
-
+<textarea id='chatInput' onkeypress="onEnter(event, this)"></textarea>
+<button onclick='send()' id='send'>Send</button>
 </body>
 </html>
+
+<script>
+var chats = "";
+function send() {
+    chats += "<span class='chatBubble'>" + "    "+ document.getElementById("chatInput").value + "    " + "</span><br>";
+    document.getElementById("text").innerHTML = chats + " <br>";
+    document.getElementById("chatInput").value = "";
+    return true;
+}
+function onEnter(e) {
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if (code == 13) {
+        chats += "<span class='chatBubble'>" + "    "+ document.getElementById("chatInput").value + "    " + "</span><br>";
+        document.getElementById("text").innerHTML = chats + " <br>";
+        document.getElementById("chatInput").value = "";
+        return true;
+    }
+}
+</script>
