@@ -24,7 +24,7 @@
 		</style>
 	</head>
 	<body>
-		<form action= "" method="post" class="form-horizontal">
+		<form action= "myProfile.php" method="post" class="form-horizontal">
 			<div class="logoWrapper">
 				<img src="logo.png" class="logo" alt="Flint logo">
 			</div>
@@ -38,7 +38,7 @@
 			<br><br>
 			<div class="inputWrapper">
 				<strong>Password:</strong><br>
-				<input type="text" name="password" class="col-md-offset-3 col-md-6" password><br>
+				<input type="password" name="password" class="col-md-offset-3 col-md-6" password><br>
 			</div>
 			<br><br>
 			<div class="inputWrapper">

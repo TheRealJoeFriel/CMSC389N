@@ -15,10 +15,11 @@
 }
 
 #logo { 
-	height: 5%;
-	width: 3%;
+	height: 7%;
+	width: 4%;
 	float: right;
 }
+
 
 ul {
     list-style-type: none;
@@ -53,15 +54,16 @@ li a.active {
 <body>
 
 <ul>
-  <li><a href="feed.php">Home</a></li>
+  <li><a href="feed.php">Matches</a></li>
   <li><a class="active" href="myProfile.php">My Profile</a></li>
   <li><a href="chat.php">Chats</a></li>
+  <li><a href="Premium.html">Upgrade</a></li>
   <li><img src="logo.png" class='small' id='logo'></li>
 </ul>
 
 <h1 align = "center">Welcome to Flint! Begin by creating a profile.</h1><br>
 <div class = "container-fluid">
-	<form action = "" method = "post" class = "form-horizontal">
+	<form action = "Claude.html" method = "post" class = "form-horizontal">
 		<!-- Profile Picture -->
 		<div class = "input-group">
 			<label class = "control-label col-sm-4">&nbsp;&nbsp;Profile Picture:</label>
@@ -108,7 +110,7 @@ li a.active {
 		<div class = "form-group">
 			<label class = "control-label col-sm-1">Bio:</label>
 			<div>
-				<textarea class = "col-sm-10" rows = "8" id = "Bio"></textarea>
+				<textarea class = "col-sm-10" rows = "5" id = "Bio"></textarea>
 			</div>
 		</div>
 		
@@ -116,11 +118,20 @@ li a.active {
 		<div class = "form-group">
 			<label class = "control-label col-sm-1">Interests:</label>
 			<div>
-				<textarea class = "col-sm-10" rows = "8" id = "interests"></textarea>
+				<textarea class = "col-sm-10" rows = "5" id = "interests"></textarea>
+			</div>
+		</div>
+		
+		<!-- Interests -->
+		<div class = "form-group">
+			<label class = "control-label col-sm-1">Dislikes</label>
+			<div>
+				<textarea class = "col-sm-10" rows = "5" id = "interests"></textarea>
 			</div>
 		</div>
 		
 		<!-- Button -->
+		
 		<div class = "form-group">
 			<div class = "col-sm-4 col-sm-push-4">
 				<input type = "submit" value = "Update Profile" class = "form-control btn btn-danger">

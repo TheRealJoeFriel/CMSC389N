@@ -15,10 +15,11 @@
 }
 
 #logo { 
-	height: 5%;
-	width: 3%;
+	height: 7%;
+	width: 4%;
 	float: right;
 }
+
 
 ul {
     list-style-type: none;
@@ -45,16 +46,17 @@ li a:hover:not(.active) {
 
 li a.active {
     color: white;
-    background-color: #4CAF50;
+    background-color: red;
 }
 </style>
 </head>
 <body>
 
 <ul>
-  <li><a class="active" href="feed.php">Home</a></li>
+  <li><a class="active" href="feed.php">Matches</a></li>
   <li><a href="myProfile.php">My Profile</a></li>
   <li><a href="chat.php">Chats</a></li>
+  <li><a href="Premium.html">Upgrade</a></li>
   <li><img src="logo.png" class='small' id='logo'></li>
 </ul>
 

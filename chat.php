@@ -93,9 +93,10 @@ button {
 <body>
 
 <ul>
-  <li><a href="feed.php">Home</a></li>
+  <li><a href="feed.php">Matches</a></li>
   <li><a href="myProfile.php">My Profile</a></li>
   <li><a class="active" href="chat.php">Chats</a></li>
+  <li><a href="Premium.html">Upgrade</a></li>
   <li><img src="logo.png" class='small' id='logo'></li>
 </ul>
 
