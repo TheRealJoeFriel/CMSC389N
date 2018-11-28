@@ -3,7 +3,52 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+
+li a {
+    float: left;
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: red;
+}
+.small{
+    height: 5%;
+    width: 9%;
+}
+
+#logo { 
+    height: 7%;
+    width: 4%;
+    float: right;
+}
+</style>
 <link href="profile.css" rel="stylesheet">
+<ul>
+  <li><a href="feed.php">Home</a></li>
+  <li><a href="myProfile.php">My Profile</a></li>
+  <li><a class="active" href="chat.php">Chats</a></li>
+  <li><img src="logo.png" class='small' id='logo'></li>
+</ul>
 <div class="container">
     <div class="row">
         <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
@@ -28,37 +73,26 @@
                 </div>
             </div>            
             <div class="col-xs-12 divider text-center">
-                <div class="col-xs-12 col-sm-4 emphasis">
+                <div class="col-xs-12 col-sm-6 emphasis">
                     <h2><strong> 6 </strong></h2>                    
                     <p><small>Likes</small></p>
-                    <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Like </button>
+                    <button class="btn btn-success btn-block" onclick="toChat()"><span class="fa fa-plus-circle"></span> Like </button>
                 </div>
-                <div class="col-xs-12 col-sm-4 emphasis">
+                <div class="col-xs-12 col-sm-6 emphasis">
                     <h2><strong>33</strong></h2>                    
                     <p><small>Photos</small></p>
-                    <button class="btn btn-info btn-block"><span class="fa fa-user"></span> Send Message </button>
-                </div>
-                <div class="col-xs-12 col-sm-4 emphasis">
-                    <h2><strong>65</strong></h2>                    
-                    <p><small>Viewed</small></p>
-                    <div class="btn-group dropup btn-block">
-                      <button type="button" class="btn btn-primary"><span class="fa fa-gear"></span> Options </button>
-                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <ul class="dropdown-menu text-left" role="menu">
-                        <li><a href="#"><span class="fa fa-envelope pull-right"></span> Send an email </a></li>
-                        <li><a href="#"><span class="fa fa-list pull-right"></span> Add or remove from a list  </a></li>
-                        <li class="divider"></li>
-                        <li><a href="#"><span class="fa fa-warning pull-right"></span>Report this user for spam</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#" class="btn disabled" role="button"> Unfollow </a></li>
-                      </ul>
-                    </div>
+                    <button class="btn btn-danger btn-block"  onclick="next()"><span class="fa fa-user"></span> Dislike </button>
                 </div>
             </div>
          </div>                 
         </div>
     </div>
 </div>
+<script>
+    function toChat() {
+        document.location.href = "chat.php";
+    }
+    function next() {
+        document.location.href="Genesis.html"
+    }
+</script>

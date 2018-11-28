@@ -15,8 +15,8 @@
 }
 
 #logo { 
-	height: 5%;
-	width: 3%;
+	height: 7%;
+	width: 4%;
 	float: right;
 }
 
@@ -99,7 +99,15 @@ button {
   <li><img src="logo.png" class='small' id='logo'></li>
 </ul>
 
-<h3 style="text-align: center"> Now chatting with <script>var oldURL = document.referrer;</script> CHANGE THIS</h3>
+
+<h3 style="text-align: center" id="chatPerson"> Now chatting with</h3>
+<script>
+    var oldURL = document.referrer;
+    var filename = oldURL.substring(oldURL.lastIndexOf('/')+1);
+    oldURL = filename.substring(0, filename.length - 5);
+    document.getElementById('chatPerson').innerHTML += " " + oldURL + "!";
+
+</script>
 
 
 <div id='text'></div>
