@@ -38,7 +38,7 @@
 			<br><br>
 			<div class="inputWrapper">
 				<strong>Password:</strong><br>
-				<input type="text" name="password" class="col-md-offset-3 col-md-6"><br>
+				<input type="text" name="password" class="col-md-offset-3 col-md-6" password><br>
 			</div>
 			<br><br>
 			<div class="inputWrapper">
