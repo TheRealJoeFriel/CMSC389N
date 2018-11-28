@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<title>Upgrade to Premium!</title>
+		<!DOCTYPE html>
+	</head>
+	<style>
+		.logoWrapper {
+			margin: 0 auto;
+			text-align: center;
+		}
+		.logo {
+			width: 20%;
+		}
+		.title {
+			text-align: center;
+			font-weight: bold;
+			font-size: 3em;
+		}
+		.inputWrapper {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<form action="" method="post" class="form-inline">
+			<div class="logoWrapper">
+				<img src="PremiumLogo.png" class="logo" alt="Flint logo" style="height:400px; width: 250px" >
+			</div>
+			<!-- <div class="title">
+				Upgrade to Premium! <br>
+			</div> -->
+			<h3 class="inputWrapper">
+				Upgrading to Flint Premium gives you unlimited match opportunities, priority status, as well as no Ads! Upgrade today for only <s>$9.99</s> <span style= "color:red;">CYBER MONDAY SALE! $8.99</span>
+			</h3>
+			<br>
+			<div class="inputWrapper">
+				<strong>Credit Card:</strong><br>
+				<input type="number" name="creditCard" id='creditCard' class="col-md-offset-3 col-md-6"  required>
+			</div>
+			<br><br>
+			<div class="inputWrapper">
+				<div><strong>Name on card:</strong><br></div>
+				<input type="text" id='name' name="name" class="col-md-offset-3 col-md-6" required>
+			</div>
+			<br><br>
+			<div class="inputWrapper">
+				<div><label><strong>Expiration:</strong></label><div></div></div>
+				<input type="date" name="expiration" id='expiration' class="col-md-offset-3 col-md-6" required>
+			</div>
+			<br><br>
+			<div class="inputWrapper">
+				<strong>CVV:</strong><br>
+				<input type="number" name="cvv" id='cvv' class="col-md-offset-3 col-md-6" required>
+			</div>
+			<br><br>
+
+			<div class="inputWrapper">
+				<button onclick="checkInfo()" class="col-md-offset-3 col-md-6 btn btn-danger">Submit</button><br><br>
+				<button onclick=location.href='homepage.php' type="button" class="col-md-offset-3 col-md-6 btn btn-danger"> Back </button>
+			</div>
+		</form>
+	</body>
+</html>
+
+<script>
+var ccPattern = /[0-9]{16}/;
+
+
+function checkInfo() {
+	let name = document.getElementById('name').value;
+	let exp = document.getElementById('expiration').value;
+	let cvv = document.getElementById('cvv').value;
+	let creditCard = document.getElementById('creditCard').value;
+
+	if (ccPattern.test(creditCard) && !isNaN(cvv) && cvv.toString().length == 3 && name) {
+		alert("Thank you for purchasing Flint Premium™. Please enjoy.");
+	}
+
+
+
+}
+
+</script>
