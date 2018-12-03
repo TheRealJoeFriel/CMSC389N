@@ -54,7 +54,7 @@ li a.active {
 <body>
 
 <ul>
-  <li><a href="feed.php">Matches</a></li>
+  <li><a  href="Claude.html">Matches</a></li>
   <li><a class="active" href="myProfile.php">My Profile</a></li>
   <li><a href="chat.php">Chats</a></li>
   <li><a href="Premium.html">Upgrade</a></li>
