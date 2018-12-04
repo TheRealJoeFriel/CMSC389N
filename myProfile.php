@@ -55,7 +55,7 @@ li a.active {
 
 <ul>
   <li><a  href="Claude.html">Matches</a></li>
-  <li><a class="active" href="myProfile.php">My Profile</a></li>
+  <li><a class="active" href="Me.html">My Profile</a></li>
   <li><a href="chat.php">Chats</a></li>
   <li><a href="Premium.html">Upgrade</a></li>
   <li><img src="logo.png" class='small' id='logo'></li>
@@ -63,7 +63,7 @@ li a.active {
 
 <h1 align = "center">Welcome to Flint! Begin by creating a profile.</h1><br>
 <div class = "container-fluid">
-	<form action = "Claude.html" method = "post" class = "form-horizontal">
+	<form action = "Me.html" method = "post" class = "form-horizontal">
 		<!-- Profile Picture -->
 		<div class = "input-group">
 			<label class = "control-label col-sm-4">&nbsp;&nbsp;Profile Picture:</label>
